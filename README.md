@@ -1,6 +1,6 @@
 # sbt-scalatest-runner
 
-This is a Scala 2.11 runner that fetches dependencies using sbt, and executes tests using scalatest.
+This is a Scala 2.12 runner that fetches dependencies using sbt, and executes tests using scalatest.
 
 ## How to Use
 
@@ -9,7 +9,7 @@ In order to use this runner for your project, edit the `codingame.yml` file and 
 ```yaml
     runner:
       name: codingame/sbt-scalatest-runner
-      version: 1.0-scala-2.11
+      version: 1.0-scala-2.12
 ```
 
 ## Example
