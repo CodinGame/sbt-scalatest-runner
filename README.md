@@ -14,7 +14,24 @@ In order to use this runner for your project, edit the `codingame.yml` file and 
 
 ## Example
 
-In this example, the user is asked to write a hello world (file `src/main/scala/example/Hello.scala`):
+We're using the following project:
+
+```
+.
+├── build.sbt
+├── codingame.yml
+└── src
+    ├── main
+    │   └── scala
+    │       └── example
+    │           └── Hello.scala
+    └── test
+        └── scala
+            └── example
+                └── HelloSpec.scala
+```
+
+In this example, the user is asked to write a hello world (in `Hello.scala`):
 
 ```scala
 package example
@@ -28,7 +45,7 @@ trait Greeting {
 }
 ```
 
-In order to test the answer, the following unit test is created (file `src/test/scala/example/HelloSpec.scala`):
+In order to test the answer, the following unit test is created (in `HelloSpec.scala`):
 
 ```scala
 package example
@@ -40,6 +57,17 @@ class HelloSpec extends FlatSpec with Matchers {
     Hello.greeting shouldEqual "hello"
   }
 }
+```
+
+The sbt build configuration is:
+
+```
+organization := "com.example"
+version := "0.1.0-SNAPSHOT"
+name := "Hello world"
+scalaVersion := "2.12.0"
+
+libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.0"
 ```
 
 In the markdown file, the unit test can be called using:
