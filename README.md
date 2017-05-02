@@ -9,7 +9,7 @@ In order to use this runner for your project, edit the `codingame.yml` file and 
 ```yaml
     runner:
       name: codingame/sbt-scalatest-runner
-      version: 1.0.0-scala-2.12
+      version: 1.0.1-scala-2.12
 ```
 
 ## Example
